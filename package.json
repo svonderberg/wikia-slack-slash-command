@@ -1,0 +1,33 @@
+{
+  "name": "koa-server-proto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "exec-tsc": "tsc src/index.ts --lib ES2015 -w",
+    "exec-babel": "babel src/index.js --out-file index.js -w",
+    "exec-nodemon": "nodemon index.js",
+    "local": "concurrently \"npm run exec-tsc\" \"npm run exec-babel\" \"npm run exec-nodemon\"",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.16.2",
+    "cheerio": "^1.0.0-rc.2",
+    "koa": "^2.3.0",
+    "koa-body": "^2.5.0",
+    "to-markdown": "^3.1.0"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.0.39",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "concurrently": "^3.5.0",
+    "nodemon": "^1.12.1",
+    "typescript": "^2.5.3"
+  },
+  "engines": {
+    "node": "6.11.1"
+  }
+}
